@@ -1,0 +1,57 @@
+Specifications for the Final Project.
+
+The specifications/requirements are flexible and general, so that you can have more freedom when picking a project idea. The specifications/requirements, for the final project, are as follows:
+
+(1.) The C++ program that your group writes should implement, at least, one of each of the following various C++ features that we cover during the semester:
+
+(A.) Variables and assignment operations.
+
+(B.) Branches.
+
+(C.) Loops.
+
+(D.) Arrays and/or vectors.
+
+(E.) User-defined functions.
+
+Note that, if we end up covering more C++ features than those enumerated in the point number 1 above, these enumerated features are the minimum features that should be implemented in your final project.
+
+(2.) The developed app should implement input data validation.
+
+(3.) While you are free to repurpose code, from any source of your choice, kindly note the following about doing so:
+
+(A.) You should write no less than 60% of the total code in your final project (the more that the code, which you write, is greater than 60%, the better).
+
+(B.) All the code, which you repurpose, should make up no more than 40% of the total code in the final project (the more that the code, which you repurpose, is less than 40%, the better).
+
+(C.) You should provide/submit a list of any and all sources from which you obtained any code that you repurpose; this reference list will be submitted as part of the final project deliverables. 
+
+(4.) Do not use third-party C++ libraries, which are not part of the C++ Standard Library, in the C++ program that your group implements.
+
+Deliverable(s) for the Final Project.
+
+NOTE: Only one submission (which includes the deliverables in the points numbers 1 through 3 below) should be made per group! If a group makes multiple submissions, and I happen to grade the submission amongst these multiple submissions that is not the best submission for the group, I will not later on regrade another of the multiple submissions, if the group members contact me with the information that I initially graded the wrong submission. While the deliverables in the points numbers 1 through 3 below have a due date of 11:59 PM on 12/15, you will provide the deliverable in the point number 4 below as described in this point below.
+
+(1.) If your implemented program(s) contain(s) more than one file, compress these multiple files and submit the compressed file here on Canvas.
+
+(2.) Submit an abstract, which describes the app that you have implemented and made an oral presentation on.
+
+(3.) Submit a listing, of any and all sources from which you obtained any code that you repurposed in your implemented app, as follows:
+
+(A.) Use a (numbered or unnumbered) bulleted point to provide a reference, in a list of references, to each of your sources.
+
+(B.) For any source that is accessible online, the reference to this source should include the URL to the online location of the source.
+
+(C.) For any source that is inaccessible online, the reference to this source should provide a means to access the source.
+
+(D.) Use the (numbered or unnumbered) bulleted points to also provide brief descriptions of the purpose of any third-party libraries that you used in your implemented app.
+
+(4.) Each group will make an oral presentation of their project before the entire class.
+
+(A.) Each group's oral presentation will entail each group member making their own oral presentation.
+
+(B.) Each group should prepare one set of presentation slides, so that all group members will use the same set of presentation slides when it gets to the turn of each group member to make their own oral presentation.
+
+(C.) During the oral presentations, you are required to ask, at least, one question to one or more of the groups that make their presentations. If the oral presentations are split into two days (because there are too many groups to fit into one day), you are required to ask, at least, two questions, with, at least, one question on each of both days.
+
+(D.) Because these oral presentations will comprise the final exam in this course, the oral presentations will be held during the time that the university has allocated for the final exam for this course to be held. However, if the oral presentations need to be split into two days (because there are too many groups to fit into one day), some of the oral presentations will be held during our last class time of the week before finals week.
