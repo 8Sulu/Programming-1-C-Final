@@ -1,42 +1,70 @@
 #include <iostream>
-#include <limits>
+#include <limits> 
 
 using namespace std;
 
-const int THRESHOLD = 100;
+void reverseArray(int arr[], int size) {
+    int start = 0;
+    int end = size - 1;
 
-int calculateSum(int arr[], int size) {
-    int sum = 0;
-    for (int i = 0; i < size; ++i) {
-        sum += arr[i];
+    while (start < end) {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+
+        ++start;
+        --end;
     }
-    return sum;
 }
 
-int main() {
-    const int arraySize = 5;
-    int numbers[arraySize];
+int getValidIntegerInput() {
+     int input;
 
-    cout << "Enter " << arraySize << " numbers:" << endl;
+    while (true) {
+        try {
+            cin >> input;
 
-    for (int i = 0; i < arraySize; ++i) {
-        cout << "Number " << i + 1 << ": ";
-        while (!(cin >> numbers[i])) {
-            cout << "Invalid input. Please enter a number: ";
+            if (cin.fail() || cin.peek() != '\n') {
+                throw runtime_error("Invalid input. Please enter a valid integer");
+            } else {
+                break;
+            }
+        } catch (const exception& e) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << e.what() << ": ";
         }
     }
 
-    int result = calculateSum(numbers, arraySize);
+    return input;
+}
 
-    cout << "Sum of the numbers: " << result << endl;
+int main() {
+    cout << "Enter the size of the array: ";
+    int size;
+    cin >> size;
 
-    if (result > THRESHOLD) {
-        cout << "The sum is greater than the threshold." << endl;
-    } else {
-        cout << "The sum is not greater than the threshold." << endl;
+    int myArray[size];
+
+    cout << "Enter elements of the array:\n";
+    for (int i = 0; i < size; ++i) {
+        cout << "Element " << i + 1 << ": ";
+        myArray[i] = getValidIntegerInput();
     }
+
+    cout << "Original Array: ";
+    for (int i = 0; i < size; ++i) {
+        cout << myArray[i] << " ";
+    }
+    cout << endl;
+
+    reverseArray(myArray, size);
+
+    cout << "Reversed Array: ";
+    for (int i = 0; i < size; ++i) {
+        cout << myArray[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
