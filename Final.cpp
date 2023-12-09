@@ -1,16 +1,17 @@
 #include <iostream>
 #include <limits> 
+#include <vector>
 
 using namespace std;
 
-void reverseArray(int arr[], int size) {
+void reverseVector(vector<int> &vec, int size) {
     int start = 0;
-    int end = size - 1;
+    int end = vec.size() - 1;
 
     while (start < end) {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
+        int temp = vec[start];
+        vec[start] = vec[end];
+        vec[end] = temp;
 
         ++start;
         --end;
@@ -44,25 +45,25 @@ int main() {
     int size;
     cin >> size;
 
-    int myArray[size];
+    vector <int> myVector(size);
 
     cout << "Enter elements of the array:\n";
     for (int i = 0; i < size; ++i) {
         cout << "Element " << i + 1 << ": ";
-        myArray[i] = getValidIntegerInput();
+        myVector[i] = getValidIntegerInput();
     }
 
     cout << "Original Array: ";
     for (int i = 0; i < size; ++i) {
-        cout << myArray[i] << " ";
+        cout << myVector[i] << " ";
     }
     cout << endl;
 
-    reverseArray(myArray, size);
+    reverseVector(myVector, size);
 
     cout << "Reversed Array: ";
     for (int i = 0; i < size; ++i) {
-        cout << myArray[i] << " ";
+        cout << myVector[i] << " ";
     }
     cout << endl;
 
