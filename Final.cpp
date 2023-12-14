@@ -24,7 +24,6 @@ int getValidIntegerInput() {
     while (true) {
         try {
             cin >> input;
-
             if (cin.fail() || cin.peek() != '\n') {
                 throw runtime_error("Invalid input. Please enter a valid integer");
             } else {
@@ -33,7 +32,6 @@ int getValidIntegerInput() {
         } catch (const exception& e) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            
             cout << e.what() << ": ";
         }
     }
