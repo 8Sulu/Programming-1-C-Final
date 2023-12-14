@@ -18,13 +18,14 @@ void reverseVector(vector<int> &vec, int size) {
     }
 }
 
-int getValidIntegerInput() {
+int getValidIntegerInput(bool negative) {
     int input;
     
     while (true) {
         try {
             cin >> input;
-            if (cin.fail() || cin.peek() != '\n') {
+
+            if (cin.fail() || cin.peek() != '\n' || (input < 0 && negative)) {
                 throw runtime_error("Invalid input. Please enter a valid integer");
             } else {
                 break;
@@ -32,6 +33,7 @@ int getValidIntegerInput() {
         } catch (const exception& e) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            
             cout << e.what() << ": ";
         }
     }
@@ -40,14 +42,14 @@ int getValidIntegerInput() {
 
 int main() {
     cout << "Enter the size of the array: ";
-    int size = getValidIntegerInput();
+    int size = getValidIntegerInput(1);
 
     vector <int> myVector(size);
 
     cout << "Enter elements of the array:\n";
     for (int i = 0; i < size; ++i) {
         cout << "Element " << i + 1 << ": ";
-        myVector[i] = getValidIntegerInput();
+        myVector[i] = getValidIntegerInput(0);
     }
 
     cout << "Original Array: ";
