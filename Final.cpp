@@ -19,8 +19,8 @@ void reverseVector(vector<int> &vec, int size) {
 }
 
 int getValidIntegerInput() {
-     int input;
-
+    int input;
+    
     while (true) {
         try {
             cin >> input;
@@ -33,17 +33,16 @@ int getValidIntegerInput() {
         } catch (const exception& e) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            
             cout << e.what() << ": ";
         }
     }
-
     return input;
 }
 
 int main() {
     cout << "Enter the size of the array: ";
-    int size;
-    cin >> size;
+    int size = getValidIntegerInput();
 
     vector <int> myVector(size);
 
