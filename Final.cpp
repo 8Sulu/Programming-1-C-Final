@@ -25,7 +25,7 @@ int getValidIntegerInput(bool negative) {
         try {
             cin >> input;
 
-            if (cin.fail() || cin.peek() != '\n' || (input < 0 && negative)) {
+            if (cin.fail() || cin.peek() != '\n' || (input <= 0 && negative)) {
                 throw runtime_error("Invalid input. Please enter a valid integer");
             } else {
                 break;
@@ -41,18 +41,18 @@ int getValidIntegerInput(bool negative) {
 }
 
 int main() {
-    cout << "Enter the size of the array: ";
+    cout << "Enter the size of the vector: ";
     int size = getValidIntegerInput(1);
 
     vector <int> myVector(size);
 
-    cout << "Enter elements of the array:\n";
+    cout << "Enter elements of the vector:\n";
     for (int i = 0; i < size; ++i) {
         cout << "Element " << i + 1 << ": ";
         myVector[i] = getValidIntegerInput(0);
     }
 
-    cout << "Original Array: ";
+    cout << "Original Vector: ";
     for (int i = 0; i < size; ++i) {
         cout << myVector[i] << " ";
     }
@@ -60,7 +60,7 @@ int main() {
 
     reverseVector(myVector, size);
 
-    cout << "Reversed Array: ";
+    cout << "Reversed Vector: ";
     for (int i = 0; i < size; ++i) {
         cout << myVector[i] << " ";
     }
